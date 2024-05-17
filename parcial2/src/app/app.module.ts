@@ -3,6 +3,9 @@ import { BrowserModule, provideClientHydration } from '@angular/platform-browser
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { PinguinoModule } from './pinguino/pinguino.module';
+import { HttpClientModule } from '@angular/common/http';
+import { PinguinoListComponent } from './pinguino/pinguino-list/pinguino-list.component';
 
 @NgModule({
   declarations: [
@@ -10,7 +13,9 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    PinguinoModule,
+    HttpClientModule
   ],
   providers: [
     provideClientHydration()
